@@ -1,0 +1,11 @@
+services:
+    db:
+        image: mariadb
+        environment:
+            - MARIADB_ROOT_PASSWORD=Afpa1234
+    web:
+        build: .
+        ports:
+            - 8000:80
+        volumes:
+            - .:/var/www
